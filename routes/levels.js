@@ -28,6 +28,7 @@ router.put('/', (req, res, next) => {
     } else {
         points = 0
     }
+    console.log(req.session.userInfo.id);
     return knex('users')
         .where('id', req.session.userInfo.id)
         .update({
