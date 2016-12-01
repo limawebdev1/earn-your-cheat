@@ -106,6 +106,7 @@ router.post('/', (req, res) => {
          .then((user2) => {
           delete user1[0].hash;
           req.session.userInfo = user1[0];
+          console.log('hey i be here');
           res.redirect('/levels');
          })
        })
