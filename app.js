@@ -33,8 +33,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieSession({
   name: 'eyc',
-  secret: process.env.SESSION_SECRET,
-  secureProxy: app.get('env') === 'production'
+  secret: process.env.SESSION_SECRET
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
