@@ -29,7 +29,7 @@ router.put('/', (req, res, next) => {
         points = 0
     }
     return knex('users')
-        .where('users.id', req.session.userInfo.id)
+        .where('id', req.session.userInfo.id)
         .update({
             tot_pts: points,
             lvl: level
