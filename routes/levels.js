@@ -3,6 +3,7 @@ var router = express.Router();
 const knex = require('../knex');
 
 router.get('/', (req, res, next) => {
+  console.log(req.session);
     res.render('levels', {stuff:`<ul id='nav-mobile' class="right hide-on-med-and-down">
 <li><a class="logout" href="/">Log Out</a></li>
 <li><a href="day">Day</a></li>
