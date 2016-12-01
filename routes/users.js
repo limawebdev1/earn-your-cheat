@@ -4,7 +4,6 @@ const knex = require('../knex');
 const cookieSession = require('cookie-session');
 
 router.get('/', (req, res, next) => {
-  console.log(req.session.userInfo);
   if(req.session.userInfo.is_admin){
     knex('users')
      .where('is_admin', false)
@@ -24,7 +23,6 @@ router.get('/', (req, res, next) => {
 });
 
 router.delete('/', (req, res, next) => {
-  console.log(req.body.email);
     knex('users')
     .where('email', req.body.email)
     .del()

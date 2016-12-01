@@ -87,7 +87,6 @@ router.post('/', (req, res) => {
         is_admin: false
        })
        .then((user1) => {
-        console.log(user1[0]);
         knex('day')
          .returning('*')
          .insert({
@@ -106,7 +105,6 @@ router.post('/', (req, res) => {
          .then((user2) => {
           delete user1[0].hash;
           req.session.userInfo = user1[0];
-          console.log('hey i be here');
           res.redirect('/levels');
          })
        })
@@ -160,7 +158,6 @@ router.post('/', (req, res) => {
      delete user[0].hash;
      delete user[0].accessToken;
      req.session.userInfo = user[0];
-     console.log(user[0]);
      res.send('/day');
     }
    })

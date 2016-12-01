@@ -6,7 +6,6 @@ $(document).ready(() => {
 
 function updateUserLevel(){
   $('.update-level').click((e) => {
-    // console.log('updating level')
     e.preventDefault()
     const level = $(e.target).val()
     $.ajax({

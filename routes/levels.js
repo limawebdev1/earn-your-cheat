@@ -3,7 +3,6 @@ var router = express.Router();
 const knex = require('../knex');
 
 router.get('/', (req, res, next) => {
-  console.log(req.session);
     res.render('levels', {stuff:`<ul id='nav-mobile' class="right hide-on-med-and-down">
 <li><a class="logout" href="/">Log Out</a></li>
 <li><a href="day">Day</a></li>
@@ -29,7 +28,6 @@ router.put('/', (req, res, next) => {
     } else {
         points = 0
     }
-    console.log(req.session.userInfo.id);
     return knex('users')
         .where('id', req.session.userInfo.id)
         .update({

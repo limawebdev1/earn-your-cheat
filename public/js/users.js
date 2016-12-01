@@ -2,7 +2,6 @@ $(document).ready(function(){
   $('.trash').click((e) => {
     e.preventDefault();
     var email = $('.trash').attr('id');
-    console.log(email);
     $.ajax({
         url: `/users`,
         method: 'DELETE',
