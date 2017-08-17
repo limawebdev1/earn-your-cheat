@@ -1,4 +1,4 @@
-#Earn Your Cheat
+# Earn Your Cheat
 
 **Earn Your Cheat** is a mobile-first app designed to track your daily health and fitness choices to earn points towards a cheat food of your choice.
 
@@ -7,7 +7,7 @@ Here's a video walkthrough of how to use our app: https://youtu.be/irtDt3QiQyE
 View our deployed app here: http://earnyourcheat.herokuapp.com/
 
 
-###Features
+### Features
 1. The **home page** gives you a brief introduction to the app and allows you to sign up/log in via the form or externally using Facebook.
 2. If you are a first-time user, you will be redirected to the **levels page** where you can choose your difficulty. Depending on what you choose, you will be given varying number of points to start with.
 3. You will then be redirected to your **main page** where you'll see your total points.
@@ -21,7 +21,7 @@ View our deployed app here: http://earnyourcheat.herokuapp.com/
 **Note:** There are also admin privileges where an admin can delete users whose points are in the negative.
 
 
-###Technologies Used
+### Technologies Used
 1. For Facebook's external authorization and log in/sign up, we used **Facebook's SDK**.
 2. To populate the cheat items, we used the **Nutritionix API**.
 3. The app uses a **Materialize** framework, **handlebars** templating and **Express.js** to query our **Postgres** database.
